@@ -1,0 +1,212 @@
+#include <iostream>
+#include <string>
+#include <limits>
+#include <stdlib.h>
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main()
+{
+	std::string name;
+	int level;
+	int points = 0;
+	int option;
+	cout << "Welcome to \"I hate the internet\" trivia game\nWhat's your name?\n";
+	getline(cin, name);
+	cout << "Hello, " << name << "!\nPlease hit enter to see the instructions.";
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	system("CLS");
+	cout << "In this game you'll get a series of multiple option questions, \nto answer just type the number of the option you think answers the question best.\nTo end the game just type 9 or finish all the questions.\n";
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	system("CLS");
+	cout << "Please select your level of difficulty:\n(1)Didn't read the book\n\n(2)Kinda breezed through it\n\n(3)I actually read the book\n\n(4)I wrote the damn book\n";
+	cin >> level;
+	cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	system("CLS");
+	do
+	{
+		if (level == 1)
+		{
+			{
+				cout << "Level 1 selected, good luck getting anything right since you didn't read the book, slacker.\n\n";
+				cout << "What's the name of the book?\n\n";
+				cout << "(1)I love the internet\n(2)The filth of instagram\n(3)I hate the internet\n(4)Harry Potter and the Philosopher's Stone\n";
+				cin >> option;
+				if (option == 3)
+				{
+					cout << "\nGreat at least you know the name of the book\n\n";
+					points++;
+				}
+				else
+					cout << "\nWrong answer!!\n\n";
+			}
+			{
+				cout << "What was name of the comic book Adeline worked on fresh out of college?\n\n";
+				cout << "(1)I hate the internet\n(2)Naruto\n(3)Super Man\n(4)Trill\n";
+				cin >> option;
+				if (option == 4)
+				{
+					cout << "\nCorrect!!\n\n";
+					points++;
+				}
+				else
+					cout << "\nWrong answer!!\n\n";
+			}
+			{
+				cout << "Who is the author of the book?\n\n";
+				cout << "(1)Jarett Kobek\n(2)Steve Jobs\n(3)Mark Zuckerberg\n(4)David Squires\n";
+				cin >> option;
+				if (option == 1)
+				{
+					cout << "\nCorrect!!\n\n";
+					points++;
+				}
+				else
+					cout << "\nWrong answer!!\n\n";
+			}
+		}
+
+		if (level == 2)
+		{
+			{
+				cout << "Level 2 selected, you'll get 2 points per question\n\n";
+				cout << "What year did Adeline move to San Francisco?\n\n";
+				cout << "(1)1996\n(2)1994\n(3)1997\n(4)1995\n";
+				cin >> option;
+				if (option == 1)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 2;
+				}
+				else
+					cout << "\nWrong answer!!\n\n";
+			}
+			{
+				cout << "When did J. Karacehennem meet Adeline?\n\n";
+				cout << "(1)During the making of the film Trill\n(2)During the run up to the feature film adaptation Trill\n(3)At the movies\n(4)At Walt Disney's house\n";
+				cin >> option;
+				if (option == 2)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 2;
+				}
+				else
+					cout << "\nWrong answer!!\n\n";
+			}
+			{
+				cout << "Which is one of Adelines believes?\n\n";
+				cout << "(1)Ghost are real\n(2)Everyone should recycle\n(3)Climate change isn't real\n(4)Good sex was posible only with people in possesion of a primal intelligence\n";
+				cin >> option;
+				if (option == 4)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 2;
+				}
+				else
+					cout << "\nWrong answer!!\n\n";
+			}
+		}
+
+		if (level == 3)
+		{
+			{
+				cout << "Level 3 selected, you'll get 5 points per question but you'll lose 2 per wrong answer\n\n";
+				cout << "During high school what phase did Christine when through?\n\n";
+				cout << "(1)Emo\n(2)Vegan\n(3)Wicca\n(4)Gamer\n";
+				cin >> option;
+				if (option == 3)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 5;
+				}
+				else
+				{
+					points -= 2;
+					cout << "\nWrong answer!!\n\n";
+				}
+			}
+			{
+				cout << "According to Christine, what is the most important thing to understand about google?\n\n";
+				cout << "(1)It's a company of trustworthy people\n(2)Google knows everything\n(3)It's a company of thieves\n(4)It's a company of liars\n";
+				cin >> option;
+				if (option == 4)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 5;
+				}
+				else
+				{
+					points -= 2;
+					cout << "\nWrong answer!!\n\n";
+				}
+			}
+			{
+				cout << "During what years Adeline lived in New York?\n\n";
+				cout << "(1)1986 to 1996\n(2)1985 to 1996\n(3)1986 to 1993\n(4)1985 to 1990\n";
+				cin >> option;
+				if (option == 1)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 5;
+				}
+				else
+				{
+					points -= 2;
+					cout << "\nWrong answer!!\n\n";
+				}
+			}
+		}
+		if (level == 4)
+		{
+			{
+				cout << "Level 4 selected, you'll get 10 points per question but you'll lose 12 per wrong answer\n\n";
+				cout << "What was baby's WaNks index?\n\n";
+				cout << "(1)1.31411327\n(2)1.31411317\n(3)1.31411117\n(4)42\n";
+				cin >> option;
+				if (option == 2)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 10;
+				}
+				else
+				{
+					points -= 12;
+					cout << "\nWrong answer!!\n\n";
+				}
+			}
+			{
+				cout << "J. Karacehennem agreed to do a litarary reading, where?\n\n";
+				cout << "(1)851 Haight Street\n(2)851 Haight Ave\n(3)861 Haight Street\n(4)861 Haight Ave\n";
+				cin >> option;
+				if (option == 1)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 10;
+				}
+				else
+				{
+					points -= 12;
+					cout << "\nWrong answer!!\n\n";
+				}
+			}
+			{
+				cout << "What new comic Adeline told Christine she was working on?\n\n";
+				cout << "(1)Trill 2\n(2)The Blind Washerwoman of Moorfields\n(3)The Black Washerwoman of Moorfields\n(4)The Blind Washerwoman of Springfield\n";
+				cin >> option;
+				if (option == 2)
+				{
+					cout << "\nCorrect!!\n\n";
+					points += 10;
+				}
+				else
+				{
+					points -= 12;
+					cout << "\nWrong answer!!\n\n";
+				}
+			}
+		}
+		option = 9;
+	} while (option != 9);
+	cout << name << "'s score: " << points << "\n";
+}
